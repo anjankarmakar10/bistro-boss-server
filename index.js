@@ -45,7 +45,7 @@ const jwtVerify = (req, res, next) => {
 
 async function run() {
   try {
-    await client.connect();
+    client.connect();
 
     const menuCollection = client.db("restaurants").collection("menu");
     const reviewCollection = client.db("restaurants").collection("reviews");
